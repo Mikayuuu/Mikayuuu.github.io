@@ -44,7 +44,6 @@
 
 <body>
   <div class="container">
-    <!-- Title Section -->
     <div class="row mt-5">
       <div class="col text-center">
         <h1 style="color: #ffffff; font-size: 2.5rem;">MOBILE LEGENDS</h1>
@@ -52,7 +51,6 @@
       </div>
     </div>
 
-    <!-- Search Section -->
     <div class="row mt-4">
       <div class="col p-5">
         <div class="d-flex">
@@ -62,7 +60,6 @@
       </div>
     </div>
 
-    <!-- Hero Details Section -->
     <div class="row my-4">
       <div class="col">
         <div class="card p-3 m-3 rounded-5 text-center" style="background-color: #ee8cf7; overflow: hidden;">
@@ -86,7 +83,6 @@
   </script>
 
   <script>
-    // Mock data since no official MLBB API exists
     const heroes = {
       "layla": {
         name: "Layla",
@@ -121,14 +117,12 @@
 
   };
 
-    // Elements
     const heroName = document.getElementById("heroName");
     const heroRole = document.getElementById("heroRole");
     const heroSpecialty = document.getElementById("heroSpecialty");
     const heroImage = document.getElementById("heroImage");
     const heroSkillSound = document.getElementById("heroSkillSound");
 
-    // Load hero data
     const loadHero = () => {
       const searchTerm = document.getElementById("searchBar").value.toLowerCase();
 
@@ -147,7 +141,6 @@
       }
     };
 
-    // Play skill sound
     const playSkill = () => {
       heroSkillSound.play();
     };
