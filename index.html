@@ -4,131 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Explore the various projects I've worked on.">
+    <meta name="keywords" content="projects, portfolio, work">
+    <title>Project Homepage</title>
+    
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
+        html, body {
+            height: 100%; 
+            margin: 0; 
+        }
+
         body {
-            background: url('https://i.pinimg.com/736x/77/28/a1/7728a1c535a024582c9ee3580933f96d.jpg') no-repeat center center fixed;
+            display: flex; 
+            flex-direction: column; 
+            background-color: #fa4499; 
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://i.pinimg.com/736x/f0/a9/b5/f0a9b5593780864044a448b94f090e7d.jpg');
             background-size: cover;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            background-color: #f5faf2; 
+            color: rgb(243, 247, 242);
             text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .content {
-            position: absolute;
-            width: 80%;
-            max-width: 800px;
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .btn-project {
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-light {
+            background-image: url('https://i.pinimg.com/564x/ac/ce/0a/acce0a090697a4ff55dfb0b91e598393.jpg');
+            background-size: cover;
+            background-color: #b19cd9; 
+            color: white; 
+        }
+
+        .btn-secondary {
+            background-image: url('https://i.pinimg.com/564x/ac/ce/0a/acce0a090697a4ff55dfb0b91e598393.jpg');
+            background-size: cover;
+            background-color: #9370db; 
+            color: white;
+        }
+
+        .btn-success {
+            background-image: url('https://i.pinimg.com/564x/ac/ce/0a/acce0a090697a4ff55dfb0b91e598393.jpg');
+            background-size: cover;
+            background-color: #8a2be2; 
+            color: white;
+        }
+
+        .btn-info {
+            background-image: url('https://i.pinimg.com/564x/ac/ce/0a/acce0a090697a4ff55dfb0b91e598393.jpg');
+            background-size: cover;
+        }
+
+        .container {
+            flex: 1; 
+            background-color: rgb(24, 1, 49); 
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            padding: 50px;
+        }
+
+        footer {
+            padding: 2px; 
+            text-align: center;
+            background-color: rgb(28, 3, 58);
+            color: #270136;
+            width: 100%; 
+            position: relative; 
+            left: 0; 
+            
+        }
+
+        .footer-text {
+            font-size: 13px;
             margin: 0;
-        }
-
-        .neon-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: lowercase;
-            color: #ffffff;
-            margin-bottom: 100px;
-        }
-
-        .cat {
-            position: relative;
-            animation: jump 2s infinite ease-in-out;
-            margin-bottom: 0px;
-        }
-
-        .cat img {
-            width: 70%;
-            height: 0%;
-            position: relative;
-            z-index: 1;
-        }
-
-        .oops-text {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: rgb(245, 106, 164);
-            z-index: 2;
-        }
-
-        .error-code {
-            position: absolute;
-            top: 80%;
-            left: 51%;
-            transform: translate(-50%, -50%);
-            font-size: 8rem;
-            font-weight: bold;
-            color: white;
-            text-shadow: 0 0 5px #e7549e, 0 0 5px #b13db1, 0 0 10px #ff66ff;
-            z-index: 2;
-        }
-
-        .error-message {
-            position: inherit;
-            top: 90%;
-            font-size: 2rem;
-            font-weight: arial;
-            color: white;
-        }
-
-        @keyframes jump {
-
-            50%,
-            50% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-80px);
-            }
-        }
-
-        .back-arrow {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: white;
-            font-size: 2rem;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            .cat img {
-                width: 70%;
-            }
-            .neon-text {
-                font-size: 1.2rem;
-            }
-            .error-code {
-                font-size: 3rem;
-            }
+            color: #fa4499;
         }
     </style>
 </head>
 
 <body>
-    <a href="/" class="back-arrow">&#8592;</a>
-    <div class="content">
-        <p class="neon-text">Congratulations! You found our worst page.</p>
-        <div class="cat">
-            <img src="https://i.pinimg.com/736x/13/b1/8a/13b18ab599b755a0e457b9bf088e281f.jpg" alt="Neon Cat">
-            <div class="oops-text">oops!</div>
-        </div>
-        <div>
-            <p class="error-code">404</p>
-            <p class="error-message">Page Not Found</p>
-        </div>
+
+    <div class="hero">
+        <h1>Mikay's Projects</h1>
+        <p>Explore the various projects I've worked on.</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <main class="container">
+        <a href="index.html" class="btn btn-light btn-project" aria-label="Go to Project 1">Project 1</a>
+        <a href="another-project.html" class="btn btn-light btn-project" aria-label="Go to Project 2">Project 2</a> 
+        <a href="another-project.html" class="btn btn-light btn-project" aria-label="Go to Project 3">Project 3</a> 
+        <a href="another-project.html" class="btn btn-light btn-project" aria-label="Go to Project 4">Project 4</a> 
+        
+    </main>
+
+    
+    <footer class="bg-light text-center">
+        <div class="container-fluid p-4">
+            <p class="footer-text">© 2024 Mikylla Project | Designed by Me</p>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
